@@ -1,0 +1,11 @@
+<h1>Things to do</h1>
+
+<form action="/todo" method="post">
+  <input type="text" placeholder="Todo Title" name="title" />
+  <input type="submit" class="btn btn-sm btn-primary" value="Add Todo" />
+</form>
+<ul>
+{{#each todos}}
+  <li>{{title}}<a href="/todo/{{_id}}/delete" class="btn btn-danger btn-sm">Delete</a></li>
+{{/each}}
+</ul>
